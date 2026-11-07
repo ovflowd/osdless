@@ -80,8 +80,8 @@ commands, their output, the journal lines and what the OSD showed before and aft
 report. Then, in one pull request:
 
 - add `("<MODEL>", "<feature>")` to `VERIFIED` in `osdless.py`;
-- change that cell in the README's [support matrix](../README.md#supported-monitors) to VERIFIED
-  (`tests/test_readme.py` checks that the two agree);
+- change that cell in the [support matrix](supported-monitors.md) to VERIFIED, and for a model's first
+  verified write mark it Tested in the README (`tests/test_readme.py` checks that all three agree);
 - change the fixture's `expect` to `verified`, and mention the round trip in its `provenance`.
 
 `oled clean`, `kvm` and `input` are disruptive: the screen goes dark for minutes, the USB hub moves

@@ -5,10 +5,11 @@ import osdless
 from rig import TOOL
 
 README = (TOOL.parent / "README.md").read_text()
+MATRIX = (TOOL.parent / "docs" / "supported-monitors.md").read_text()
 
 
-def table(section: str) -> tuple[list[str], list[list[str]]]:
-    lines = README.split(f"\n## {section}\n", 1)[1].splitlines()
+def table(section: str, text: str = README) -> tuple[list[str], list[list[str]]]:
+    lines = text.split(f"\n## {section}\n", 1)[1].splitlines()
     start = next(i for i, line in enumerate(lines) if line.startswith("|"))
     rows = []
     for line in lines[start:]:
@@ -28,7 +29,7 @@ def parsers(parser: argparse.ArgumentParser) -> list[argparse.ArgumentParser]:
 
 
 def test_the_support_matrix_marks_exactly_the_verified_writes():
-    header, rows = table("Supported monitors")
+    header, rows = table("Support matrix", MATRIX)
     names = {feature.name for feature in osdless.FEATURES}
     marked = set()
     for row in rows:
@@ -37,6 +38,12 @@ def test_the_support_matrix_marks_exactly_the_verified_writes():
             marked |= {(model, feature) for model, cell in zip(header[1:], row[1:], strict=True) if "VERIFIED" in cell}
     assert marked == osdless.VERIFIED
     assert names <= {row[0].strip("`") for row in rows}
+
+
+def test_the_readme_marks_tested_only_the_models_with_a_verified_write():
+    _, rows = table("Supported monitors")
+    tested = {row[0].split()[-1] for row in rows if row[1] == "Tested"}
+    assert tested == {model for model, _ in osdless.VERIFIED}
 
 
 def test_the_command_table_lists_every_command_and_its_values():

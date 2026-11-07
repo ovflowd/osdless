@@ -13,7 +13,7 @@ Every fact carries one of these labels:
 | **THIRD-PARTY** | Seen by another project on another model, linked. Not checked with osdless |
 
 The lists of codes osdless never sends or never writes are `NEVER_SEND` and `NEVER_WRITE` at the
-top of [osdless.py](../osdless.py), and the README's [safety model](../README.md#safety-model) gives
+top of [osdless.py](../osdless.py), and the [safety model](how-it-works.md#safety-model) gives
 the reason for each. This page does not repeat them.
 
 ## DDC/CI in one paragraph

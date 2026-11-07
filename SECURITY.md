@@ -29,8 +29,8 @@ manager belong to those projects.
 
 ## What osdless touches
 
-See [Privacy](README.md#privacy) and the [safety model](README.md#safety-model) in the README: what
-it reads, what it writes, and what it never sends.
+See [Privacy](docs/how-it-works.md#privacy) and the [safety model](docs/how-it-works.md#safety-model):
+what it reads, what it writes, and what it never sends.
 
 ## Supported versions
 

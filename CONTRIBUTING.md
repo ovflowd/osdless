@@ -36,7 +36,7 @@ OSDLESS_REAL_MONITOR=1 uv run pytest tests/test_real_monitor.py
 
 ## Changing what osdless writes
 
-- Read the [safety model](README.md#safety-model) first. Every write goes through
+- Read the [safety model](docs/how-it-works.md#safety-model) first. Every write goes through
   `Monitor.set_value`, and every check sits in front of it. Do not add a second path to `setvcp`.
 - A change to a gate comes with a test that fails without it.
 - Adding a code to `NEVER_SEND` or `NEVER_WRITE` is always welcome. Removing one needs evidence
