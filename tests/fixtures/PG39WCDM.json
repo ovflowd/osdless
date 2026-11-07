@@ -1,0 +1,190 @@
+{
+  "provenance": "Capabilities and registers from a read-only ddcutil 3.0.2 scan of a PG39WCDM (firmware 103, VCP table 2.7, DisplayPort) on 2026-11-06, with the serial replaced. 0xE8 and 0xEB answered Unsupported. On 2026-11-07, oled uniform on and off were written and read back on this model: 0xFD 0x0029 -> 0x0069 -> 0x0029.",
+  "schema": 1,
+  "display": {
+    "mfg": "AUS",
+    "model": "PG39WCDM",
+    "serial": "SYNTHETIC0001",
+    "bus": 9,
+    "connector": "card1-DP-1"
+  },
+  "capabilities": "(prot(monitor)type(lcd)model(PG39WCDM)cmds(01 02 03 07 0C E3 F3) vcp(02 04 08 10 12 14(03 04 05 06 07 08 09 0B) 16 18 1A 52 60(0F 11 12 1A) 62 72(50 64 78 8C A0) 87(00 0A 14 1E 28 32 3C 46 50 5A 64) 8A 8D(01 02) CC(01 02 03 04 05 06 07 08 09 0A 0C 0D 11 12 14 1A 1E 1F 23 24 25 26 27) D6(01 05) DC(01 02 04 05 06 07 08 0A) E1(00 01) E2(01 02 03) E3(00 07 08 09 0A 0B 0C) E4(00 01 02 03 04 05) E5(00 01 02 03 04) E6 E7(00 01) E8(01 02 03 04 05 06 07 08) E9 EA(00 01 02) EB(00 01 02 03 04 05 06 07) EE EF F0(00 01) F3(01 02 03) F4(00 01 02 03 04 05 06 07) F5 F6 F7 F8(00 02 04 08) F9(00 01 02 03) FB(01 02 03 04 05 06 07 08 09 0A 0B 0C 0D) FC(049F) FD(00FD) FF) mswhql(1)mccs_ver(2.0)asset_eep(32)mpu_ver(01))",
+  "registers": {
+    "02": [
+      1,
+      2
+    ],
+    "10": [
+      40,
+      100
+    ],
+    "12": [
+      80,
+      100
+    ],
+    "14": [
+      5,
+      11
+    ],
+    "16": [
+      100,
+      100
+    ],
+    "18": [
+      100,
+      100
+    ],
+    "1A": [
+      100,
+      100
+    ],
+    "52": [
+      16,
+      255
+    ],
+    "60": [
+      15,
+      29
+    ],
+    "62": [
+      50,
+      100
+    ],
+    "72": [
+      120,
+      160
+    ],
+    "87": [
+      50,
+      100
+    ],
+    "8A": [
+      50,
+      100
+    ],
+    "8D": [
+      2,
+      2
+    ],
+    "CC": [
+      2,
+      39
+    ],
+    "D6": [
+      1,
+      5
+    ],
+    "DC": [
+      5,
+      10
+    ],
+    "E1": [
+      1,
+      1
+    ],
+    "E2": [
+      0,
+      254
+    ],
+    "E3": [
+      254,
+      254
+    ],
+    "E4": [
+      254,
+      254
+    ],
+    "E5": [
+      254,
+      254
+    ],
+    "E6": [
+      254,
+      254
+    ],
+    "E7": [
+      254,
+      254
+    ],
+    "E9": [
+      5150,
+      25720
+    ],
+    "EA": [
+      254,
+      254
+    ],
+    "EE": [
+      254,
+      254
+    ],
+    "EF": [
+      177,
+      519
+    ],
+    "F0": [
+      0,
+      0
+    ],
+    "F3": [
+      2,
+      3
+    ],
+    "F4": [
+      254,
+      254
+    ],
+    "F5": [
+      0,
+      0
+    ],
+    "F6": [
+      0,
+      0
+    ],
+    "F7": [
+      0,
+      0
+    ],
+    "F8": [
+      8,
+      8
+    ],
+    "F9": [
+      3,
+      3
+    ],
+    "FB": [
+      258,
+      65535
+    ],
+    "FC": [
+      144,
+      33951
+    ],
+    "FD": [
+      41,
+      253
+    ],
+    "FF": [
+      32,
+      103
+    ]
+  },
+  "read_errors": {},
+  "expect": {
+    "profile": "asus-v2-gaming",
+    "features": {
+      "oled saver": "untested",
+      "oled logo": "untested",
+      "oled uniform": "verified",
+      "oled clear-edge": "untested",
+      "oled clean": "untested",
+      "oled reminder": "untested",
+      "oled screen-move": "untested",
+      "power": "untested",
+      "kvm": "untested",
+      "input": "untested"
+    }
+  }
+}

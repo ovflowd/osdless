@@ -1,0 +1,12 @@
+# Reports, dumps and capability caches from real monitors can hold serial numbers: never commit them
+osdless-report-*
+caps-*.json
+local/
+
+__pycache__/
+*.egg-info/
+build/
+dist/
+.venv/
+.pytest_cache/
+.ruff_cache/

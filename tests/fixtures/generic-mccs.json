@@ -1,0 +1,114 @@
+{
+  "provenance": "Synthetic: a monitor from another maker (EDID maker XYZ) that happens to list 0xFD. Capabilities string, registers and serial are made up.",
+  "schema": 1,
+  "display": {
+    "mfg": "XYZ",
+    "model": "GEN27",
+    "serial": "SYNTHETIC0008",
+    "bus": 9,
+    "connector": "card1-DP-1"
+  },
+  "capabilities": "(prot(monitor)type(LCD)model(GEN27)cmds(01 02 03 07 0C F3)vcp(02 04 05 08 10 12 14(01 05 08 0B) 16 18 1A 52 60(0F 11 12) 62 AC AE B2 B6 C6 C8 C9 D6(01 04 05) DF FD(00FD) FF)mccs_ver(2.2))",
+  "registers": {
+    "02": [
+      1,
+      2
+    ],
+    "10": [
+      50,
+      100
+    ],
+    "12": [
+      50,
+      100
+    ],
+    "14": [
+      1,
+      11
+    ],
+    "16": [
+      50,
+      100
+    ],
+    "18": [
+      50,
+      100
+    ],
+    "1A": [
+      50,
+      100
+    ],
+    "52": [
+      50,
+      100
+    ],
+    "60": [
+      15,
+      18
+    ],
+    "62": [
+      50,
+      100
+    ],
+    "AC": [
+      50,
+      100
+    ],
+    "AE": [
+      50,
+      100
+    ],
+    "B2": [
+      50,
+      100
+    ],
+    "B6": [
+      50,
+      100
+    ],
+    "C6": [
+      50,
+      100
+    ],
+    "C8": [
+      50,
+      100
+    ],
+    "C9": [
+      50,
+      100
+    ],
+    "D6": [
+      1,
+      5
+    ],
+    "DF": [
+      50,
+      100
+    ],
+    "FD": [
+      41,
+      253
+    ],
+    "FF": [
+      32,
+      101
+    ]
+  },
+  "read_errors": {},
+  "expect": {
+    "profile": "read-only",
+    "features": {
+      "oled saver": "unavailable",
+      "oled logo": "unavailable",
+      "oled uniform": "unavailable",
+      "oled clear-edge": "unavailable",
+      "oled clean": "unavailable",
+      "oled reminder": "unavailable",
+      "oled screen-move": "unavailable",
+      "power": "unavailable",
+      "kvm": "unavailable",
+      "input": "unavailable"
+    }
+  }
+}

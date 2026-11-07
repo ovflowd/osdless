@@ -1,0 +1,55 @@
+name: Monitor report
+description: Add a monitor, or report what a write did on yours
+title: "Monitor report: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Run `osdless report --output .` and attach the `osdless-report-*.json` file it writes,
+        below. It reads every code your monitor lists, writes nothing, and leaves out the serial
+        number. [docs/adding-a-monitor.md](https://github.com/ovflowd/osdless/blob/main/docs/adding-a-monitor.md)
+        explains what happens next.
+  - type: input
+    id: model
+    attributes:
+      label: Monitor model
+      placeholder: PG34WCDM
+    validations:
+      required: true
+  - type: input
+    id: firmware
+    attributes:
+      label: Firmware
+      description: From the OSD's information page.
+    validations:
+      required: true
+  - type: input
+    id: connection
+    attributes:
+      label: Connection and system
+      description: DisplayPort, USB-C or HDMI, direct or through a dock or MST hub; the GPU driver and desktop.
+      placeholder: DisplayPort, direct, amdgpu, KDE Plasma 6.8
+    validations:
+      required: true
+  - type: textarea
+    id: report
+    attributes:
+      label: The report
+      description: Attach the JSON file here (drag it in), and paste the summary `osdless report` printed.
+    validations:
+      required: true
+  - type: textarea
+    id: osd
+    attributes:
+      label: What the OSD shows
+      description: |
+        For a few settings that `osdless status` decodes (GameVisual, Power Setting, KVM, the OLED
+        care toggles), what the OSD says, so the decoding can be checked.
+  - type: textarea
+    id: writes
+    attributes:
+      label: Writes you tried
+      description: |
+        Only if you tried any. For each: the command, its output, the `journalctl -t osdless`
+        lines, what the OSD showed before and after, and how you set it back.
+      render: text

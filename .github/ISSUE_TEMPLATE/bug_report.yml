@@ -1,0 +1,57 @@
+name: Bug report
+description: Something does not work as the README says
+body:
+  - type: markdown
+    attributes:
+      value: |
+        `osdless list`, `status` and `features` print your monitor's serial number. Replace it
+        with `<serial>` before you paste their output. `osdless report` leaves it out.
+  - type: input
+    id: osdless
+    attributes:
+      label: osdless version and commit
+      description: The output of `osdless --version`, and the commit you installed (or `sha256sum osdless.py`).
+    validations:
+      required: true
+  - type: input
+    id: ddcutil
+    attributes:
+      label: ddcutil version
+      description: The first line of `ddcutil --version`.
+    validations:
+      required: true
+  - type: input
+    id: monitor
+    attributes:
+      label: Monitor and firmware
+      description: The model, and the firmware from `osdless status` (0xFF) or the OSD.
+      placeholder: PG39WCDM, firmware 103
+    validations:
+      required: true
+  - type: input
+    id: connection
+    attributes:
+      label: Connection
+      description: DisplayPort, USB-C or HDMI, and whether it goes through a dock or MST hub.
+      placeholder: DisplayPort, direct
+    validations:
+      required: true
+  - type: input
+    id: system
+    attributes:
+      label: Distribution, kernel, GPU driver and desktop
+      placeholder: Fedora 44, Linux 7.3, amdgpu, KDE Plasma 6.8
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: The command and its output
+      description: Run it with `--json` if you can. For a write, add the lines from `journalctl -t osdless`.
+      render: text
