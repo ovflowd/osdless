@@ -4,6 +4,8 @@ updates:
     directory: /
     schedule:
       interval: weekly
+    cooldown:
+      default-days: 3
     open-pull-requests-limit: 3
     groups:
       # pytest and ruff are the only dependencies, both for development, so one pull request
@@ -15,6 +17,8 @@ updates:
     directory: /
     schedule:
       interval: monthly
+    cooldown:
+      default-days: 3
     groups:
       actions:
         patterns:
